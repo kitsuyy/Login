@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     @IBAction func forgotAction(_ sender: UIButton) {
         switch sender {
         case forgotUserNameButton:
-            showAlert(withTitle: "Really?", andMessage: "Your name is User 😉")
+            showAlert(withTitle: "Really?", andMessage: "Your name is Username 😉")
         default:
             showAlert(withTitle: "Really?", andMessage: "Your password is Password 😉")
         }

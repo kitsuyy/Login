@@ -124,6 +124,10 @@
                                     <constraint firstAttribute="width" secondItem="ehA-9C-kGa" secondAttribute="height" multiplier="1:1" id="G5e-gb-rS9"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="heU-0A-zTP">
+                                <rect key="frame" x="95" y="216" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ACN-eX-NhR"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -142,6 +146,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eXb-pQ-t3v"/>
                     <connections>
+                        <outlet property="gifView" destination="heU-0A-zTP" id="uPL-Sq-2JR"/>
                         <outlet property="welcomeLabel" destination="EtO-nA-SbK" id="MEU-3v-Yvi"/>
                     </connections>
                 </viewController>
