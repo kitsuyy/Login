@@ -16,7 +16,6 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Gamarjoba, \(usernameLabel ?? "")!"
-        
         gifView.loadGif(name: "pepefrg-4")
         
         
