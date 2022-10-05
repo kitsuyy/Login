@@ -188,7 +188,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="eIW-Iu-zXF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Dnf-cm-bge">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="nLm-Oh-IV9">
@@ -202,15 +202,15 @@
             </objects>
             <point key="canvasLocation" x="2070" y="863.02816901408448"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="UJs-iK-mRJ">
             <objects>
-                <viewController id="s6f-KV-Rey" sceneMemberID="viewController">
+                <viewController id="s6f-KV-Rey" customClass="ThirdViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zj6-ur-W8e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3G0-Hf-pcN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="vZZ-DP-gFZ"/>
                 </viewController>
@@ -256,6 +256,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

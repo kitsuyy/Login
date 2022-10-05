@@ -12,8 +12,16 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
+        let color1 = UIColor(red: 255/255, green: 55/255, blue: 200/255, alpha: 1).cgColor
+        let color2 = UIColor(red: 55/255, green: 100/255, blue: 255/255, alpha: 1).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [color1,color2]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.0)
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)    }
     
 
     /*
