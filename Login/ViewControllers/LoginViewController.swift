@@ -17,8 +17,18 @@ class LoginViewController: UIViewController {
     private let password = "Password"
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.usernameLabel = user
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControlers = tabBarVC.viewControllers else { return }
+        
+        viewControlers.forEach { viewController in
+            if let firstVC = viewController as? WelcomeViewController {
+                firstVC.usernameLabel = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let secondVC = navigationVC.topViewController as? SecondViewController else { return }
+                secondVC.title = "Profile"
+                secondVC.view.backgroundColor = .purple
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,15 +50,15 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        usernameTF.text = ""
-        passwordTF.text = ""
-    }
-    
     @IBAction func forgotAction(_ sender: UIButton) {
         sender.tag == 0
         ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 😉")
         : showAlert(withTitle: "Oops!", andMessage: "Your password is \(password) 😉")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
