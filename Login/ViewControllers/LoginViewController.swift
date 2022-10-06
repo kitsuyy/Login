@@ -13,8 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let user = "User"
-    private let password = "Password"
+    private let userData = User.userLog()
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
@@ -22,9 +21,11 @@ class LoginViewController: UIViewController {
         
         viewControlers.forEach { viewController in
             if let firstVC = viewController as? WelcomeViewController {
-                firstVC.usernameLabel = user
+                firstVC.usernameLabel = userData.username
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let secondVC = navigationVC.topViewController as? SecondViewController else { return }
+                
+                secondVC.data = Person.userData()
                 secondVC.title = "Profile"
                 secondVC.view.backgroundColor = .purple
             }
@@ -39,7 +40,7 @@ class LoginViewController: UIViewController {
     // MARK: - UIAction
     
     @IBAction func logInPressed() {
-        guard usernameTF.text == user, passwordTF.text == password else {
+        guard usernameTF.text == userData.username, passwordTF.text == userData.password else {
             showAlert(
                 withTitle: "Invalid login or password",
                 andMessage: "Please, enter correct login and password",
@@ -52,8 +53,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotAction(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user) 😉")
-        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(password) 😉")
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(userData.username) 😉")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(userData.password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

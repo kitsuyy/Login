@@ -70,7 +70,6 @@
 				0AFC4E3A28E8E7B6005A6B58 /* WelcomeViewController.swift */,
 				0ABFCDF728EE0B7400FB7670 /* SecondViewController.swift */,
 				0ABFCDF928EE0B8700FB7670 /* ThirdViewController.swift */,
-				0A6188A728EDF41500C46CAA /* Bio.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -105,11 +104,20 @@
 			children = (
 				0A6188A328EDED3200C46CAA /* App */,
 				0A6188A428EDED6800C46CAA /* ViewControllers */,
+				0AC25ADA28EF155800A731D0 /* Models */,
 				0A6188A528EDED9800C46CAA /* Storyboards */,
 				0A884E3C28E7AEA000BE6725 /* Assets.xcassets */,
 				0AFC4E3C28E9C263005A6B58 /* pepefrg-4.gif */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		0AC25ADA28EF155800A731D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A6188A728EDF41500C46CAA /* Bio.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

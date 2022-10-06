@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -149,7 +150,7 @@
                             <constraint firstAttribute="trailing" secondItem="fAD-Qw-pgH" secondAttribute="trailing" constant="126" id="xKZ-Cl-MXC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="1.circle.fill" catalog="system" id="C1R-F8-TFE"/>
+                    <tabBarItem key="tabBarItem" title="First" image="network" catalog="system" id="C1R-F8-TFE"/>
                     <navigationItem key="navigationItem" id="eXb-pQ-t3v"/>
                     <connections>
                         <outlet property="gifView" destination="heU-0A-zTP" id="uPL-Sq-2JR"/>
@@ -169,7 +170,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cQt-QO-3RB">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="tintColor" systemColor="systemGray5Color"/>
+                        <color key="barTintColor" systemColor="systemGray6Color"/>
+                        <color key="selectedImageTintColor" systemColor="secondarySystemBackgroundColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="46O-ec-CGj" kind="relationship" relationship="viewControllers" id="PZ2-fD-C7t"/>
@@ -263,7 +267,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eIW-Iu-zXF"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="Mo7-7C-dJT" firstAttribute="leading" secondItem="eIW-Iu-zXF" secondAttribute="leading" constant="16" id="6lh-d6-wqL"/>
                             <constraint firstItem="Mo7-7C-dJT" firstAttribute="top" secondItem="eIW-Iu-zXF" secondAttribute="top" constant="100.5" id="Bba-XH-YAC"/>
@@ -277,17 +281,25 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Dnf-cm-bge">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="nLm-Oh-IV9">
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="s6f-KV-Rey" kind="show" id="dx2-PX-BXF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="company" destination="cyC-Ci-iCY" id="kSe-x7-6cV"/>
+                        <outlet property="m" destination="YN2-r0-vLM" id="G6q-aB-N5o"/>
+                        <outlet property="name" destination="KGo-OD-ArV" id="KtJ-4D-5fn"/>
+                        <outlet property="otdel" destination="f0c-CQ-7dI" id="m30-lt-tiU"/>
+                        <outlet property="surname" destination="9bn-jS-cC2" id="lyD-2W-dEH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H58-Fd-8mC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2070" y="863.02816901408448"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Bio-->
         <scene sceneID="UJs-iK-mRJ">
             <objects>
                 <viewController id="s6f-KV-Rey" customClass="ThirdViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
@@ -303,7 +315,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3G0-Hf-pcN"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="jDt-Ty-Kc7" firstAttribute="top" secondItem="Zj6-ur-W8e" secondAttribute="topMargin" constant="-6.5" id="2qz-qw-apW"/>
                             <constraint firstItem="jDt-Ty-Kc7" firstAttribute="centerX" secondItem="Zj6-ur-W8e" secondAttribute="centerX" id="SsC-Gk-QKx"/>
@@ -311,7 +323,10 @@
                             <constraint firstItem="3G0-Hf-pcN" firstAttribute="bottom" secondItem="jDt-Ty-Kc7" secondAttribute="bottom" priority="999" constant="412" id="zhC-np-V9c"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vZZ-DP-gFZ"/>
+                    <navigationItem key="navigationItem" title="Bio" id="vZZ-DP-gFZ"/>
+                    <connections>
+                        <outlet property="bioInfoLabel" destination="jDt-Ty-Kc7" id="GA3-8v-SGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGA-EU-2tJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -321,11 +336,23 @@
         <scene sceneID="pBp-2I-C5g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iPO-Uc-ruy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="2.circle.fill" catalog="system" id="2uT-nV-gnT"/>
+                    <tabBarItem key="tabBarItem" title="Second" id="2uT-nV-gnT">
+                        <imageReference key="image" image="person.fill" catalog="system" variableValue="0.0"/>
+                        <color key="badgeColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gK8-bK-BZg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.004530444588" green="0.004530444588" blue="0.004530444588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.004530444588" green="0.004530444588" blue="0.004530444588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" red="0.004530444588" green="0.004530444588" blue="0.004530444588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.004530444588" green="0.004530444588" blue="0.004530444588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" red="0.004530444588" green="0.004530444588" blue="0.004530444588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -337,10 +364,11 @@
             <point key="canvasLocation" x="1072.5" y="863.02816901408448"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="opaqueSeparatorColor"/>
     <resources>
-        <image name="1.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="2.circle.fill" catalog="system" width="128" height="123"/>
         <image name="images (фон удален)" width="260" height="193"/>
+        <image name="network" catalog="system" width="128" height="123"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -353,11 +381,17 @@
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
