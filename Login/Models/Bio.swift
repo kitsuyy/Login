@@ -27,14 +27,19 @@ struct Person {
     let age: String
     let company: String
     let bio: String
+    let group: String
+    let photo: String
     
     static func userData() -> Person {
         Person(
-            name: "K",
-            surname: "L",
-            age: "1",
-            company: "A",
-            bio: "Something")
+            name: "Kirill",
+            surname: "Lozovoi",
+            age: "11",
+            company: "Swiftbook",
+            bio: "Something",
+            group: "30",
+            photo: "pepefrg-4"
+        )
     }
 }
 

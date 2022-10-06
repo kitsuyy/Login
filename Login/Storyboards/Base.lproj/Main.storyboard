@@ -193,34 +193,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mo7-7C-dJT">
-                                <rect key="frame" x="16" y="193" width="89.5" height="134.5"/>
+                                <rect key="frame" x="16" y="193" width="84" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3x-8u-8oa">
-                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6I-0c-wVW">
-                                        <rect key="frame" x="0.0" y="28.5" width="89.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="84" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Компания" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAQ-1D-L0v">
-                                        <rect key="frame" x="0.0" y="57" width="89.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возвраст:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAQ-1D-L0v">
+                                        <rect key="frame" x="0.0" y="57" width="84" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отдел" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T4-oK-8rb">
-                                        <rect key="frame" x="0.0" y="85.5" width="89.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Компания:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T4-oK-8rb">
+                                        <rect key="frame" x="0.0" y="85.5" width="84" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCg-RU-A2Y">
-                                        <rect key="frame" x="0.0" y="114" width="89.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курс:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCg-RU-A2Y">
+                                        <rect key="frame" x="0.0" y="114" width="84" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -288,10 +288,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="company" destination="cyC-Ci-iCY" id="kSe-x7-6cV"/>
-                        <outlet property="m" destination="YN2-r0-vLM" id="G6q-aB-N5o"/>
+                        <outlet property="age" destination="cyC-Ci-iCY" id="kSe-x7-6cV"/>
+                        <outlet property="company" destination="f0c-CQ-7dI" id="m30-lt-tiU"/>
+                        <outlet property="group" destination="YN2-r0-vLM" id="G6q-aB-N5o"/>
                         <outlet property="name" destination="KGo-OD-ArV" id="KtJ-4D-5fn"/>
-                        <outlet property="otdel" destination="f0c-CQ-7dI" id="m30-lt-tiU"/>
+                        <outlet property="profilePhoto" destination="niP-iS-MzP" id="OCA-F9-D4d"/>
                         <outlet property="surname" destination="9bn-jS-cC2" id="lyD-2W-dEH"/>
                     </connections>
                 </viewController>
@@ -332,11 +333,11 @@
             </objects>
             <point key="canvasLocation" x="2775" y="863"/>
         </scene>
-        <!--Second-->
+        <!--Profile-->
         <scene sceneID="pBp-2I-C5g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iPO-Uc-ruy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" id="2uT-nV-gnT">
+                    <tabBarItem key="tabBarItem" title="Profile" id="2uT-nV-gnT">
                         <imageReference key="image" image="person.fill" catalog="system" variableValue="0.0"/>
                         <color key="badgeColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                     </tabBarItem>

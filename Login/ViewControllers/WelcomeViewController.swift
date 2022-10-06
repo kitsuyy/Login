@@ -11,13 +11,14 @@ final class WelcomeViewController: UIViewController {
 
     @IBOutlet var gifView: UIImageView!
     @IBOutlet var welcomeLabel: UILabel!
+    
     var usernameLabel: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         welcomeLabel.text = "Gamarjoba, \(usernameLabel ?? "")!"
         gifView.loadGif(name: "pepefrg-4")
         setColor()
-        
     }
 }

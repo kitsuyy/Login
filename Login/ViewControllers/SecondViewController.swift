@@ -11,9 +11,11 @@ class SecondViewController: UIViewController {
     
     @IBOutlet var name: UILabel!
     @IBOutlet var surname: UILabel!
+    @IBOutlet var age: UILabel!
     @IBOutlet var company: UILabel!
-    @IBOutlet var otdel: UILabel!
-    @IBOutlet var m: UILabel!
+    @IBOutlet var group: UILabel!
+    
+    @IBOutlet var profilePhoto: UIImageView!
     
     var data: Person!
     
@@ -23,14 +25,17 @@ class SecondViewController: UIViewController {
         
         name.text = data.name
         surname.text = data.surname
+        age.text = data.age
         company.text = data.company
-        otdel.text = data.age
-        
+        group.text = data.group
+        profilePhoto.loadGif(name: data.photo)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let descriptionVC = segue.destination as? ThirdViewController else {return}
+        
         descriptionVC.bio = data.bio
+        descriptionVC.profilePhoto = data.photo
     }
 }
 

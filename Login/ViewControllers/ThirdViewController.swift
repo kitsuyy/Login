@@ -12,9 +12,11 @@ class ThirdViewController: UIViewController {
     @IBOutlet var bioInfoLabel: UILabel!
     
     var bio: String!
+    var profilePhoto: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setColor()
         bioInfoLabel.text = bio
     }

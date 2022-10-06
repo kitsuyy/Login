@@ -15,6 +15,12 @@ class LoginViewController: UIViewController {
     
     private let userData = User.userLog()
    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setColor()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControlers = tabBarVC.viewControllers else { return }
@@ -26,8 +32,6 @@ class LoginViewController: UIViewController {
                 guard let secondVC = navigationVC.topViewController as? SecondViewController else { return }
                 
                 secondVC.data = Person.userData()
-                secondVC.title = "Profile"
-                secondVC.view.backgroundColor = .purple
             }
         }
     }
